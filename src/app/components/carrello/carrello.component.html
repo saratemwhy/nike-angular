@@ -1,0 +1,118 @@
+<div class="container container-fluid d-flex justify-content-around" style="padding: 50px;">
+    <!--div con accordion per visualizzare il carrello, inserimento dati e dati pagamento-->
+    <div class="accordion accordion-flush" style="width: 70%;" id="accordionModule">
+        <!--sezione carrello-->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cart-one" aria-expanded="false" aria-controls="cart-one">
+              Carrello
+            </button>
+          </h2>
+          <div id="cart-one" class="accordion-collapse collapse show" data-bs-parent="#accordionModule">
+            <div class="accordion-body" *ngFor="let p of purchase; let i=index">
+                <ng-container *ngIf="getOneItem(p)">
+                    <div [id]="'divId'+i" class="d-flex"  style="padding: 8px; border: 1px solid rgb(234, 234, 234);">
+                        <div style="margin-right: 10%;">
+                            <img [src]="p.immagine" alt="" style="width: 120px;">
+                        </div>
+                        <div style="width: 100%;">
+                            <h6>{{p.nome}}</h6>
+                            <p>Taglia: {{p.taglia_scelta}}</p>
+                            <p>Colore: {{p.colore_scelto}}</p>
+                            <!--moltiplico il prezzo per la quantità-->
+                            <p [id]="'priceCount'+i">Prezzo: {{((p.prezzo.replace('€', ''))*getItemCount(p)) | currency: 'EUR'}}</p>
+                        </div>
+                        <div class="btn-group d-flex flex-column" role="group" style="width: 100%;">
+                            <p style="text-align: center;" >Quantità</p>
+                            <div style="text-align: center;">
+                                <button (click)="removeItem(i, p)" type="button" class="btn btn-outline-danger m-2" style="height: 35px; width: 35px;">-</button>
+                                <button [id]="'buttonCount'+i" type="button" disabled class="btn btn-outline" style="height: 35px; width: 35px;"><p>{{getItemCount(p)}}</p></button>
+                                <button (click)="addItem(i, p)" type="button" class="btn btn-outline-success m-2" style="height: 35px; width: 35px;">+</button>
+                            </div>
+                            <a style="text-align: center;cursor: pointer;" [routerLink]="" (click)="deleteItem(p)">Rimuovi</a>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="d-grid d-md-flex justify-content-md-end">
+                <button (click)="showData()" class="btn btn-outline-success me-md-4 mb-4" type="button">Continua</button>
+              </div>
+          </div>
+        </div>
+
+        <!--sezione dati-->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#data-two" aria-expanded="false" aria-controls="data-two">
+              Dati
+            </button>
+          </h2>
+          <div id="data-two" class="accordion-collapse collapse" data-bs-parent="#accordionModule">
+            <div class="accordion-body">
+  
+                <app-dati></app-dati>
+                
+            </div>
+          </div>
+        </div>
+
+        <!--sezione pagamento-->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#payment-three" aria-expanded="false" aria-controls="payment-three">
+              Pagamento
+            </button>
+          </h2>
+          <div id="payment-three" class="accordion-collapse collapse" data-bs-parent="#accordionModule">
+            <div class="accordion-body">
+                <app-dati-pagamento></app-dati-pagamento>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--div di riepilogo dei dati-->
+      <div class="card" style="width: 18rem; border: none;">
+        <div class="card-body">
+          <h5 class="card-title" style="margin-bottom: 10%;">Riepilogo</h5>
+          <div class="d-flex justify-content-between">
+            <div style="margin-bottom: 5%;">
+                <h6 class="card-text">Subtotale</h6>
+            </div>
+            <div>
+                <p id="subtotale"></p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between" style="border-bottom: 1px solid rgb(234, 234, 234);">
+            <div>
+                <h6 class="card-text">Costi di spedizione</h6>
+            </div>
+            <div>
+                <p>Gratis</p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between" style="padding-top: 8%; border-bottom: 1px solid rgb(234, 234, 234);">
+            <div>
+                <h6 class="card-text">Totale</h6>
+            </div>
+            <div>
+                <p id="totale"></p>
+            </div>
+          </div>
+          
+          <div class="p-2 text-center pb-4">
+            <button id="checkoutButton" disabled routerLink="/loading-payment" class="btn btn-light text-secondary-emphasis" style="border-radius: 50px; padding: 8%;margin-bottom: 5%;width: 100%;">
+                Vai al pagamento
+            </button>
+            <button class="btn btn-light" style="border-radius: 50px; padding: 8%;margin-bottom: 5%;width: 100%;" type="submit">
+                <img src="/assets/paypal.png" alt="" style="width: 40%;">
+            </button>
+         </div>
+        </div>
+      </div>
+</div>
+
+
+

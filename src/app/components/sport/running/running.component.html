@@ -1,0 +1,31 @@
+
+<div>
+    <video
+        id="video"
+        preload="auto"
+        data-setup="{}"
+        [muted]="'muted'" loop="" autoplay="autoplay"
+        >
+        <source src="/assets/running-ads.mp4" type="video/mp4">
+    </video>
+</div>
+
+<h2 *ngIf="this.shoes.length===0" class="pt-3 ps-3" style="margin: 5%;">Non ci sono scarpe!</h2>
+
+<div *ngIf="this.shoes.length!=0" class="container p-4">
+    <h2>Scarpe Running ({{shoes.length}})</h2>
+</div>
+
+<div *ngIf="this.shoes.length!=0" class="card-group container justify-content-start p-3">
+    <div class="p-2" *ngFor="let s of shoes">
+        <div class="card border border-light" style="width: 19rem;" >
+            <a href="" class="stretched-link"><img class="card-img-top" [src]="s.immagine" alt="New shoes"></a>
+            <div class="card-body">
+                <h5 class="card-title">{{s.nome}}</h5>
+                <p class="card-text">Scarpa {{s.categoria}}</p>
+                <p class="card-text">{{s.colori_disponibili.length}} colori disponibili</p>
+                <p class="card-text">{{s.prezzo | currency: 'EUR'}}</p>
+            </div>
+          </div>
+    </div>  
+</div>

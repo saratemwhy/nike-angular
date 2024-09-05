@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+#title{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+}
+
+.buttonUno {
+    border-radius: 50px;
+    padding: 5px;
+    margin: 0px 5px;
+    width: 5%;
+}
+
+.button{
+    border-radius: 50px;
+    padding: 2px 10px;
+    margin: 0px 5px;
+    width: fit-content;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+}
+.carousel-inner {
+    padding: 1em;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    width:40px;
+    height: 40px;
+    background-color: rgb(183, 183, 183);
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.carousel-control-prev{
+  left: unset;
+  right: 30px;
+  margin-right: 40px;
+}
+
+.overButton {
+    margin-top: 80%;
+}
+
+.buttonSp {
+    margin-top: 50%;
+}
+
+.buttonC {
+    margin-top: 100%;
+}
+  

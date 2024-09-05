@@ -1,0 +1,30 @@
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    background-color: white;
+    border: none;
+    font-size: 0.9em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#dropdown-m {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200vw;
+}
+
+#dropdown-o {
+    left: -50%;
+    transform: translateX(-55%);  
+    width: 200vw;
+}
+
+#dropdown-k {
+    left: -50%;
+    transform: translateX(-52%);  
+    width: 200vw;
+}
+
+
+
+

@@ -1,0 +1,230 @@
+
+<!--Primo banner-->
+<div>
+   <img src="/assets/banner2.png" class="img-fluid" alt="">
+</div>
+<!--Parte testo-->
+<div class="container-fluid d-flex flex-column">
+   <div  class="p-2 text-center pt-4">
+      <h1 id="title">TANTI ANNI</h1>
+      <h1 id="title">IN POCHI SECONDI</h1>
+   </div>
+   <div class="p-2 text-center">
+      <p>Una vita intera in vista di un unico grande momento. Scopri come Sha'Carri Richardson scrive la storia.</p>
+   </div>
+   <div class="p-2 text-center pb-4">
+      <button class="btn btn-dark buttonUno" type="submit">Scopri</button>
+   </div>
+   
+</div>
+
+<!--Carosello ads-->
+
+<div id="carouselAds" class="carousel slide">
+   <div class="container-fluid d-flex">
+      <div class="ps-4">
+         <h3>Tutte le migliori novità</h3>
+      </div>
+      <div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselAds" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         </button>
+         <button class="carousel-control-next me-4" type="button" data-bs-target="#carouselAds" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         </button>
+      </div>
+   </div>
+   
+   <div class="carousel-inner mb-4">
+      <div class="carousel-item active">
+         <div class="row row-cols-1 row-cols-md-3 g-0">
+            <div class="col" *ngFor="let a of advertiseUno">
+               <div  class="card h-100">
+                  <img [src]="a.url" class="card-img" alt="">
+                  <div  class="card-body">
+                     <a class="text-decoration-none text-black stretched-link" href=""><h5 class="card-title">{{a.titolo}}</h5></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="carousel-item">
+         <div class="row row-cols-1 row-cols-md-3 g-0">
+            <div class="col" *ngFor="let a of advertiseDue">
+               <div  class="card h-100">
+                  <img [src]="a.url" class="card-img" alt="">
+                  <div  class="card-body">
+                     <a class="text-decoration-none text-black stretched-link" href=""><h5 class="card-title">{{a.titolo}}</h5></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+ <!--Carosello scarpe-->
+
+<div id="carouselShoes" class="carousel slide">
+   <div class="container-fluid d-flex">
+      <div class="ps-4">
+         <h3>Acquista le nostre icone</h3>
+      </div>
+      <div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselShoes" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         </button>
+         <button class="carousel-control-next me-4" type="button" data-bs-target="#carouselShoes" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         </button>
+      </div>
+   </div>
+   
+   <div class="carousel-inner mb-4">
+      <div class="carousel-item active">
+         <div class="row row-cols-1 row-cols-md-3 g-0">
+            <div class="col" *ngFor="let s of scarpeUno">
+               <div  class="card h-100">
+                  <img [src]="s.url" class="card-img" alt="">
+                  <div  class="card-img-overlay overButton">
+                     <button type="button" class="btn btn-light button">{{s.titolo}}</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="carousel-item">
+         <div class="row row-cols-1 row-cols-md-3 g-0">
+            <div class="col" *ngFor="let s of scarpeDue">
+               <div  class="card h-100">
+                  <img [src]="s.url" class="card-img" alt="">
+                  <div  class="card-img-overlay overButton">
+                     <button type="button" class="btn btn-light button">{{s.titolo}}</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="carousel-item">
+         <div class="row row-cols-1 row-cols-md-3 g-0">
+            <div class="col" *ngFor="let s of scarpeTre">
+               <div  class="card h-100">
+                  <img [src]="s.url" class="card-img" alt="">
+                  <div  class="card-img-overlay overButton">
+                     <button type="button" class="btn btn-light button">{{s.titolo}}</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+ <!--Carosello sport-->
+
+<div id="carouselSport" class="carousel slide">
+   <div class="container-fluid d-flex">
+      <div class="ps-4">
+         <h3>Acquista per sport</h3>
+      </div>
+      <div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselSport" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         </button>
+         <button class="carousel-control-next me-4" type="button" data-bs-target="#carouselSport" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         </button>
+      </div>
+   </div>
+   
+   <div class="carousel-inner mb-4">
+      <div class="carousel-item active">
+         <div class="row row-cols-1 row-cols-md-3 g-0">
+            <div class="col" *ngFor="let sp of sportUno">
+               <div  class="card h-100">
+                  <img [src]="sp.url" class="card-img" alt="">
+                  <div  class="card-img-overlay buttonSp">
+                     <button type="button" class="btn btn-light button">{{sp.titolo}}</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="carousel-item">
+         <div class="row row-cols-1 row-cols-md-3 g-0">
+            <div class="col" *ngFor="let sp of sportDue">
+               <div  class="card h-100">
+                  <img [src]="sp.url" class="card-img" alt="">
+                  <div  class="card-img-overlay buttonSp">
+                     <button type="button" class="btn btn-light button">{{sp.titolo}}</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="carousel-item">
+         <div class="row row-cols-1 row-cols-md-3 g-0">
+            <div class="col" *ngFor="let sp of sportTre">
+               <div  class="card h-100">
+                  <img [src]="sp.url" class="card-img" alt="">
+                  <div  class="card-img-overlay buttonSp">
+                     <button type="button" class="btn btn-light button">{{sp.titolo}}</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!--Carosello categoria-->
+
+<div id="carouselCat" class="carousel slide">
+   <div class="container-fluid d-flex">
+      <div class="ps-4">
+         <h3>Scopri di più</h3>
+      </div>
+      <div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselCat" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         </button>
+         <button class="carousel-control-next me-4" type="button" data-bs-target="#carouselCat" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         </button>
+      </div>
+   </div>
+   
+   <div class="carousel-inner mb-4">
+      <div class="carousel-item active">
+         <div class="row row-cols-1 row-cols-md-3 g-0">
+            <div class="col" *ngFor="let c of categoriaUno">
+               <div  class="card h-100">
+                  <img [src]="c.url" class="card-img" alt="">
+                  <div class="card-img-overlay buttonC">
+                     <button type="button" class="btn btn-light button">{{c.titolo}}</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="carousel-item">
+         <div class="row row-cols-1 row-cols-md-3 g-0">
+            <div class="col" *ngFor="let c of categoriaDue">
+               <div class="card h-100">
+                  <img [src]="c.url" class="card-img" alt="">
+                  <div class="card-img-overlay buttonC">
+                     <button type="button" class="btn btn-light button">{{c.titolo}}</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="container-fluid p-4">
+   <img src="/assets/banner3.jpg" class="img-fluid" alt="">
+</div>

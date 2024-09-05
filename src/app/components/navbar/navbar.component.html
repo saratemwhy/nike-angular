@@ -1,0 +1,239 @@
+<!-- Prima navbar -->
+<nav style="height:5%;" class="navbar navbar-expand-lg navbar-light bg-light py-0">
+    <!-- Loghi jordan e converse -->
+    <div class="collapse navbar-collapse ms-5">
+        <a class="navbar-brand" href="#">
+            <img src="/assets/jordan.png" width="25" height="25" alt="">
+        </a>
+        <a class="navbar-brand" href="#">
+            <img src="/assets/converse.png" width="25" height="15" alt="">
+        </a>
+    </div>
+    <!-- Link -->
+    <div class="collapse navbar-collapse d-inline-flex justify-content-end me-4">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a style="font-size: 0.9em;" class="nav-link fw-medium mt-1 text-black" href="#">Trova un negozio</a>
+          </li>
+          <span class="mt-2"><p>|</p></span>
+          <li class="nav-item">
+            <a style="font-size: 0.9em;" class="nav-link fw-medium mt-1 text-black" href="#">Aiuto</a>
+          </li>
+          <span class="pt-2"><p>|</p></span>
+          <li class="nav-item">
+            <a style="font-size: 0.9em;" class="nav-link fw-medium mt-1 text-black" href="#">Unisciti a noi</a>
+          </li>
+          <span class="pt-2"><p>|</p></span>
+          <li class="nav-item">
+            <a style="font-size: 0.9em;" class="nav-link fw-medium mt-1 text-black" href="#">Accedi</a>
+          </li>
+        </ul>
+      </div>
+</nav>
+
+
+<!-- Seconda navbar -->
+<nav class="navbar navbar-expand-lg bg-white" id="navbar-due">
+    <!-- Logo nike -->
+    <div class="container-fluid p-0">
+      <a class="navbar-brand ms-5" href="#">
+        <img src="/assets/nike.png" width="60" height="60" alt="Nike">
+      </a>
+    <!-- Link -->
+      <div class="collapse navbar-collapse justify-content-center" style="margin-left: 10%;">
+        <ul class="navbar-nav mb-2 mb-lg-0 nav-underline">
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-medium text-black dropdown" href="#">Novità e in evidenza</a>
+                <!--Dropdown menu Novità e in evidenza-->
+                <div class="dropdown-menu" id="dropdown-m" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="d-flex container-fluid justify-content-center">
+                        <div class="pe-5">
+                            <a class="dropdown-item fw-medium" href="#">In evidenza</a>
+                            <a class="dropdown-item" [routerLink]="" type="button" *ngFor="let i of arrayEvidenza" (click)="goToShoes(i)">{{i}}</a>
+                        </div>
+                        <div class="pe-5">
+                            <a class="dropdown-item fw-medium" href="#">Scopri le icone</a>
+                            <a class="dropdown-item" href="#" *ngFor="let i of arrayIcone">{{i}}</a>
+                        </div>
+                        <div class="pe-5">
+                            <a class="dropdown-item fw-medium" href="#">Scopri lo sport</a>
+                            <a class="dropdown-item" [routerLink]="" type="button" *ngFor="let i of arraySport" (click)="goToSport(i)">{{i}}</a>
+                        </div>
+                        <div>
+                            <a class="dropdown-item fw-medium" href="#">Di tendenza</a>
+                            <a class="dropdown-item" href="#" *ngFor="let i of arrayTendenza">{{i}}</a>
+                        </div>
+                        
+                    </div>
+                </div>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-medium text-black dropdown" href="#">Uomo</a>
+            <!--Dropdown menu Uomo-->
+            <div class="dropdown-menu"  id="dropdown-m"  aria-labelledby="navbarDropdownMenuLink">
+                <div class="d-flex container-fluid justify-content-center">
+                    <div class="pe-5">
+                        <a class="dropdown-item fw-medium" href="#">In evidenza</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayUomoEvidenza">{{i}}</a>
+                    </div>
+                    <div class="pe-5">
+                        <a class="dropdown-item fw-medium" href="#">Scarpe</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayUomoScarpe">{{i}}</a>
+                    </div>
+                    <div class="pe-5">
+                        <a class="dropdown-item fw-medium" href="#">Abbigliamento</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayUomoAbbigliamento">{{i}}</a>
+                    </div>
+                    <div>
+                        <a class="dropdown-item fw-medium" href="#">Scopri lo sport</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayUomoSport">{{i}}</a>
+                    </div>
+                    <div>
+                        <a class="dropdown-item fw-medium" href="#">Accessori</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayUomoAccessori">{{i}}</a>
+                    </div>
+                </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-medium text-black" href="#">Donna</a>
+            <!--Dropdown menu Donna-->
+            <div class="dropdown-menu"  id="dropdown-m"  aria-labelledby="navbarDropdownMenuLink">
+                <div class="d-flex container-fluid justify-content-center ">
+                    <div class="pe-5">
+                        <a class="dropdown-item fw-medium" href="#">In evidenza</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayDonnaEvidenza">{{i}}</a>
+                    </div>
+                    <div class="pe-5">
+                        <a class="dropdown-item fw-medium" href="#">Scarpe</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayDonnaScarpe">{{i}}</a>
+                    </div>
+                    <div class="pe-5">
+                        <a class="dropdown-item fw-medium" href="#">Abbigliamento</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayDonnaAbbigliamento">{{i}}</a>
+                    </div>
+                    <div>
+                        <a class="dropdown-item fw-medium" href="#">Scopri lo sport</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayDonnaSport">{{i}}</a>
+                    </div>
+                    <div>
+                        <a class="dropdown-item fw-medium" href="#">Accessori</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayDonnaAccessori">{{i}}</a>
+                    </div>
+                </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-medium text-black" href="#">Kids</a>
+             <!--Dropdown menu Kids-->
+             <div class="dropdown-menu"  id="dropdown-k" aria-labelledby="navbarDropdownMenuLink">
+                <div class="d-flex container-fluid justify-content-center ">
+                    <div class="pe-5">
+                        <a class="dropdown-item fw-medium" href="#">In evidenza</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayKidsEvidenza">{{i}}</a>
+                    </div>
+                    <div class="pe-5">
+                        <a class="dropdown-item fw-medium" href="#">Scarpe</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayKidsScarpe">{{i}}</a>
+                    </div>
+                    <div class="pe-5">
+                        <a class="dropdown-item fw-medium" href="#">Abbigliamento</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayKidsAbbigliamento">{{i}}</a>
+                    </div>
+                    <div>
+                        <a class="dropdown-item fw-medium" href="#">Kids per età</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayKidsEta">{{i}}</a>
+                    </div>
+                    <div>
+                        <a class="dropdown-item fw-medium" href="#">Accessori</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayKidsAccessori">{{i}}</a>
+                    </div>
+                </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-medium text-black" href="#">Offerte</a>
+            <!--Dropdown menu Offerte-->
+            <div class="dropdown-menu"  id="dropdown-o" aria-labelledby="navbarDropdownMenuLink">
+                <div class="d-flex justify-content-center">
+                    <div class="pe-5">
+                        <a class="dropdown-item fw-medium" href="#">Offerte</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayOfferte">{{i}}</a>
+                    </div>
+                    <div class="pe-5">
+                        <a class="dropdown-item fw-medium" href="#">Offerte per uomo</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayOfferteUomo">{{i}}</a>
+                    </div>
+                    <div class="pe-5">
+                        <a class="dropdown-item fw-medium" href="#">Offerte per donna</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayOfferteDonna">{{i}}</a>
+                    </div>
+                    <div>
+                        <a class="dropdown-item fw-medium" href="#">Offerte kids</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayOfferteKids">{{i}}</a>
+                    </div>
+                    <div>
+                        <a class="dropdown-item fw-medium" href="#">Offerte in base allo sport</a>
+                        <a class="dropdown-item" href="#" *ngFor="let i of arrayOfferteSport">{{i}}</a>
+                    </div>
+                </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Search bar -->
+      <form class="d-flex" [formGroup]="searchShoes" role="search" (ngSubmit)="onSubmit()">
+        <button class="btn btn-outline-light rounded-start-pill border-0"  type="submit">
+          <img class="rounded-circle" src="/assets/search.png" width="20" height="20" alt="Cerca">
+        </button>
+        <input type="search" class="form-control" formControlName="inputShoes" id="inputShoes" name="inputShoes" placeholder="Cerca" style="width: 150px;">
+      </form>
+      <!-- Icone carrello e preferiti -->    
+      <div class="d-flex me-4">
+        <button class="btn btn-outline-light rounded-circle border-0 ms-2" type="button">
+          <img src="/assets/love.png" width="20" height="20" alt="Preferiti">
+        </button>
+        <button routerLink="/carrello" class="btn btn-outline-light rounded-circle border-0" type="button">
+          <img src="/assets/market.png" width="20" height="20" alt="Carrello">
+        </button>
+      </div>
+    </div>
+  </nav>
+
+ <!--Terza navbar-->
+
+    
+    <div id="carouselExampleSlidesOnly" class="carousel slide bg-body-tertiary" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="text-center">
+                <a class="navbar-brand" href="#">Tutti i nuovi arrivi</a>
+            </div>
+            <div class="text-center">
+                <a [routerLink]="['/tutti-prodotti']" style="font-size: 0.8em;color: black;">Acquista</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="text-center">
+                <a class="navbar-brand" href="#">Consegna e resi gratuiti</a>
+            </div>
+            <div class="text-center">
+                <a class="navbar-brand" style="font-size: 0.8em;" href="#">Per i Member Nike, consegna e reso gratuiti entro i primi 30 giorni. </a> <a href="" style="font-size: 0.8em;color: black;">Scopri di più. </a> <a href="" style="font-size: 0.8em;color: black;">Unisciti a noi</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="text-center">
+                <a class="navbar-brand" href="#">Fino al 50% di sconto</a>
+            </div>
+            <div class="text-center">
+                <a class="navbar-brand" href="#" style="font-size: 0.8em;color: black;">Sono iniziati i saldi. </a> <a [routerLink]="['/tutti-prodotti']"  style="font-size: 0.8em;color: black;">Acquista</a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+  

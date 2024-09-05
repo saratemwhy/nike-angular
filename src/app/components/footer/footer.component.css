@@ -1,0 +1,30 @@
+.footerC {
+    width: 100%;
+}
+
+a{
+    font-size: 0.9em;
+    font-weight:500;
+}
+
+.dropup .dropdown-menu {
+    display: none;
+    background-color: white;
+    border: none;
+    font-size: 0.9em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    bottom: 100%;
+    top: auto;
+    left: 0;
+}
+
+.dropup:hover > .dropdown-menu {
+    display: block;
+}
+
+
+
+
+
+
