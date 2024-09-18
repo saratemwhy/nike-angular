@@ -36,7 +36,7 @@ In the root of the project directory, create a file named db.json and add initia
 }
 
 ```
-In the "prodotti" section copy and paste the json file provided in the repository file.
+In the "prodotti" section copy and paste the json file provided in the project folder as "nikelista.json".
 
 ### Start json server:
 
